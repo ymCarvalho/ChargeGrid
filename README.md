@@ -1,1 +1,1 @@
-# ChargeGrid-Intelligence
+# chargegrid-intelligence
