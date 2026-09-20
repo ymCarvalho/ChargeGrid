@@ -177,7 +177,7 @@ estimativa de tempo e custo antes de iniciar.
 
 ## Arquitetura  
 
-https://docs.google.com/document/d/1C4joZcvgF5iEE5yCr6LJx5lVqMTFCgKZGueW-ReUIMM/edit?usp=sharing
+<img width="1312" height="1199" alt="Image" src="https://github.com/user-attachments/assets/fede1ee2-f828-41db-93d5-e03374b206fd" />
 
 
 ------
@@ -262,8 +262,36 @@ Base URL padrão: http://localhost:3000
 </table>
 
 ## Justificativa técnica das escolhas
-FALTA FAZER !!!!! 
---
+
+### Node.js
+
+O **Node.js** foi escolhido como ambiente de execução do backend por permitir o desenvolvimento do servidor utilizando JavaScript, mantendo uma linguagem de programação comum entre o frontend e o backend. Sua arquitetura baseada em operações assíncronas é adequada para aplicações que realizam diversas requisições simultaneamente, proporcionando uma estrutura eficiente para o processamento das solicitações da aplicação.
+
+### Express 5
+
+O **Express 5** foi utilizado para estruturar a API do sistema. O framework facilita a criação de rotas, o tratamento de requisições HTTP e a organização das regras de negócio do backend. Sua utilização também permite separar as responsabilidades da aplicação, tornando o código mais organizado e facilitando futuras alterações.
+
+### CORS
+
+O **CORS (Cross-Origin Resource Sharing)** foi utilizado para possibilitar a comunicação entre a aplicação mobile e a API. Ele permite configurar quais origens podem realizar requisições ao servidor, sendo importante para o correto funcionamento da comunicação entre diferentes componentes da aplicação.
+
+### Nodemon
+
+O **Nodemon** foi escolhido como ferramenta de apoio ao desenvolvimento. Ele monitora os arquivos do projeto e reinicia automaticamente o servidor quando uma alteração é detectada. Dessa forma, reduz a necessidade de reinicializações manuais e torna o processo de desenvolvimento e testes mais rápido.
+
+### React Native 0.86
+
+O **React Native 0.86** foi utilizado para o desenvolvimento da aplicação mobile. A tecnologia permite criar interfaces para dispositivos móveis utilizando JavaScript e o modelo de componentes do React. Essa abordagem facilita a reutilização de componentes e contribui para uma organização mais modular da interface.
+
+### Expo SDK 57
+
+O **Expo SDK 57** foi adotado para simplificar o processo de desenvolvimento, execução e testes da aplicação React Native. O Expo fornece uma infraestrutura que facilita a configuração do ambiente mobile e permite acelerar o ciclo de desenvolvimento, especialmente em projetos acadêmicos e protótipos funcionais.
+
+### Expo Router
+
+O **Expo Router** foi utilizado para organizar a navegação da aplicação. Sua estrutura baseada em arquivos permite relacionar diretórios e arquivos às diferentes rotas da aplicação, proporcionando uma organização mais clara das telas e facilitando a manutenção do projeto à medida que novas funcionalidades são adicionadas.
+
+-----
 
 ## Resultados e dados funcionais
 
