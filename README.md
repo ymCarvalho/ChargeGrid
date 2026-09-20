@@ -175,9 +175,45 @@ estimativa de tempo e custo antes de iniciar.
 * Carteira: saldo, métodos de pagamento (Pix, cartão) e recarga de créditos por valores pré-definidos ou personalizados.
 --
 
-## Arquitetura  - FALTA FAZER 
+## Arquitetura 
 
-*fazer!****
+O sistema foi desenvolvido utilizando uma arquitetura baseada na separação entre **frontend** e **backend**, permitindo organizar melhor as responsabilidades da aplicação e facilitar sua manutenção, evolução e integração.
+
+O **backend** é responsável pelo processamento das requisições, gerenciamento das regras de negócio e disponibilização dos dados por meio de uma API. Já o **frontend**, desenvolvido em React Native, é responsável pela interface com o usuário e pela apresentação das informações de forma adequada para dispositivos móveis.
+
+A comunicação entre as duas camadas ocorre por meio de requisições HTTP, utilizando uma API desenvolvida com Node.js e Express.
+
+### Tecnologias utilizadas
+
+**Backend**
+
+* **Node.js** – ambiente de execução JavaScript utilizado para desenvolver o servidor e executar a lógica do backend.
+* **Express 5** – framework utilizado para criação da API, definição das rotas e processamento das requisições HTTP.
+* **CORS (Cross-Origin Resource Sharing)** – utilizado para permitir a comunicação entre a aplicação mobile e a API, controlando o acesso às requisições provenientes de diferentes origens.
+* **Nodemon** – ferramenta utilizada durante o desenvolvimento para reiniciar automaticamente o servidor sempre que alterações são realizadas no código.
+
+**Frontend**
+
+* **React Native 0.86** – framework utilizado para o desenvolvimento da aplicação mobile, permitindo a criação de interfaces para dispositivos móveis utilizando JavaScript e componentes do React.
+* **Expo SDK 57** – plataforma utilizada para facilitar o desenvolvimento, execução e testes da aplicação React Native, fornecendo ferramentas e recursos para o desenvolvimento mobile.
+* **Expo Router** – responsável pelo gerenciamento da navegação da aplicação, utilizando uma estrutura de rotas baseada na organização dos arquivos e diretórios do projeto.
+
+### Organização da arquitetura
+
+**Aplicação Mobile (React Native + Expo)**
+↓
+**Expo Router – Navegação entre telas**
+↓
+**Requisições HTTP**
+↓
+**API REST – Express 5**
+↓
+**Node.js – Processamento e regras de negócio**
+
+Essa divisão permite que o frontend e o backend sejam desenvolvidos e mantidos de maneira independente. O React Native concentra-se na experiência e interação do usuário, enquanto o backend concentra-se no processamento das informações e no fornecimento dos serviços necessários para a aplicação.
+
+A utilização do **Node.js com Express 5** proporciona uma estrutura leve para criação da API, enquanto o **React Native com Expo** facilita o desenvolvimento da aplicação mobile. O **Expo Router** contribui para uma organização mais clara da navegação, e o **Nodemon** torna o processo de desenvolvimento mais ágil ao atualizar automaticamente o servidor durante as alterações no código.
+
 
 ------
 ## API 
@@ -261,7 +297,43 @@ Base URL padrão: http://localhost:3000
 </table>
 
 ## Justificativa técnica das escolhas
-FALTA FAZER !!!!! 
+
+A escolha das tecnologias utilizadas no desenvolvimento do sistema foi realizada considerando critérios como desempenho, facilidade de desenvolvimento, organização do código, manutenção, escalabilidade e integração entre a aplicação mobile e o servidor.
+
+### Node.js
+
+O **Node.js** foi escolhido como ambiente de execução do backend por permitir o desenvolvimento do servidor utilizando JavaScript, mantendo uma linguagem de programação comum entre o frontend e o backend. Sua arquitetura baseada em operações assíncronas é adequada para aplicações que realizam diversas requisições simultaneamente, proporcionando uma estrutura eficiente para o processamento das solicitações da aplicação.
+
+### Express 5
+
+O **Express 5** foi utilizado para estruturar a API do sistema. O framework facilita a criação de rotas, o tratamento de requisições HTTP e a organização das regras de negócio do backend. Sua utilização também permite separar as responsabilidades da aplicação, tornando o código mais organizado e facilitando futuras alterações.
+
+### CORS
+
+O **CORS (Cross-Origin Resource Sharing)** foi utilizado para possibilitar a comunicação entre a aplicação mobile e a API. Ele permite configurar quais origens podem realizar requisições ao servidor, sendo importante para o correto funcionamento da comunicação entre diferentes componentes da aplicação.
+
+### Nodemon
+
+O **Nodemon** foi escolhido como ferramenta de apoio ao desenvolvimento. Ele monitora os arquivos do projeto e reinicia automaticamente o servidor quando uma alteração é detectada. Dessa forma, reduz a necessidade de reinicializações manuais e torna o processo de desenvolvimento e testes mais rápido.
+
+### React Native 0.86
+
+O **React Native 0.86** foi utilizado para o desenvolvimento da aplicação mobile. A tecnologia permite criar interfaces para dispositivos móveis utilizando JavaScript e o modelo de componentes do React. Essa abordagem facilita a reutilização de componentes e contribui para uma organização mais modular da interface.
+
+### Expo SDK 57
+
+O **Expo SDK 57** foi adotado para simplificar o processo de desenvolvimento, execução e testes da aplicação React Native. O Expo fornece uma infraestrutura que facilita a configuração do ambiente mobile e permite acelerar o ciclo de desenvolvimento, especialmente em projetos acadêmicos e protótipos funcionais.
+
+### Expo Router
+
+O **Expo Router** foi utilizado para organizar a navegação da aplicação. Sua estrutura baseada em arquivos permite relacionar diretórios e arquivos às diferentes rotas da aplicação, proporcionando uma organização mais clara das telas e facilitando a manutenção do projeto à medida que novas funcionalidades são adicionadas.
+
+### Integração entre as tecnologias
+
+A combinação dessas tecnologias permite uma arquitetura organizada em duas camadas principais: **frontend mobile** e **backend/API**. O React Native, juntamente com Expo SDK 57 e Expo Router, concentra-se na interface e na navegação da aplicação. No backend, Node.js e Express 5 são responsáveis pelo processamento das requisições e pela disponibilização da API.
+
+A comunicação ocorre por meio de requisições HTTP, enquanto o CORS auxilia no controle dessas requisições. Durante o desenvolvimento, o Nodemon contribui para agilizar os testes e alterações no servidor.
+
 --
 
 ## Resultados e dados funcionais
