@@ -365,4 +365,66 @@ O projeto busca tornar o carregamento de veículos elétricos mais **eficiente, 
 
 > O projeto conecta **desenvolvimento de software, gestão inteligente de energia, energia renovável e mobilidade elétrica**, buscando otimizar o uso da energia e da infraestrutura disponível.
 
+---
+## Avaliação Crítica
 
+### Sustentabilidade e Impacto
+
+#### Impacto Quantitativo Estimado:
+
+#### Redução de Desperdício por Sessão (Algoritmo de Eficiência)
+
+| Fase | Sem Controle | Com FlowK | Diferença |
+| :--- | :--- | :--- | :--- |
+| **0% → 80%** | 100% da potência | 100% da potência | — |
+| **80% → 100%** | 100% da potência | 50% da potência | **−50% de energia nessa fase** |
+
+**Cenário:** Sessão típica de 22 kW com meta de 95% (partindo de 70%):
+- **Fase 0 → 80%** *(10% de carga)*: ~2,2 kWh transferidos com eficiência total.
+- **Fase 80 → 95%** *(15% de carga)*: sem FlowK = ~3,3 kWh / com FlowK = ~1,65 kWh.
+- **Energia economizada por sessão:** ~1,65 kWh.
+
+ **Impacto em um eletroposto com 10 sessões/dia:**
+> - **Energia economizada por dia:** ~16,5 kWh
+> - **Energia economizada por mês:** ~495 kWh
+> - **Equivalente:** Abastecer ~14 sessões completas sem custo adicional de geração.
+
+---
+
+#### Redução de Emissões Estimada
+> Considerando a matriz elétrica brasileira com fator de emissão médio de **~0,10 kgCO2/kWh** *(Fonte: MCTI — > Inventário Nacional)*:
+> - **Economia por sessão:** 1,65 kWh x 0,10 = **~0,165 kgCO2** evitados por sessão
+> - **Impacto mensal (10 sessões/dia x 30 dias):** **~49,5 kgCO2 evitados por mês** por eletroposto
+
+---
+
+#### Impacto do Controle de Demanda
+- **Sem balanceamento:** 3 veículos conectados simultaneamente a 22 kW cada gerariam **66 kW de demanda** (*200% acima do limite da rede*).
+- **Com FlowK:** O mesmo cenário opera com **21,99 kW** — dentro do limite e sem necessidade de fonte emergencial.
+
+>  **Atenção: ** Fontes emergenciais de energia (geradores a diesel) emitem em média **~0,65 kgCO₂/kWh** — *6,5x mais poluente* que a matriz elétrica nacional. O balanceamento do FlowK elimina diretamente essa necessidade.
+
+---
+
+### Avaliação Crítica — > O que funciona e o que pode evoluir?
+
+ **O que funciona bem:**
+> - **Lógica de Eficiência Energética:** Implementada e validada nos testes de sessão (*8 cenários documentados*).
+> - **Balanceamento Automático:** Garante operação dentro dos limites em todos os cenários testados (*1 a 4 veículos*).
+> - **Interface Mobile:** Reduz fricção e aumenta a transparência para o usuário (fatores críticos para adoção).
+
+ **O que pode evoluir nas próximas sprints:**
+> - **Integração com Hardware Real:** Substituir dados mockados por sensores reais (*PZEM-004T via ESP32*) para medições precisas e auditáveis.
+> - **Autenticação em Produção:** Implementar JWT + banco de dados persistente para ambiente de produção.
+> - **Algoritmo de Priorização:** Evoluir o balanceamento igualitário para um modelo por nível de bateria ou tipo de usuário (*premium*).
+
+---
+
+### Relevância Social e Ambiental
+
+O acesso a eletropostos acessíveis e bem gerenciados é uma barreira real para a adoção de veículos elétricos no Brasil. O **FlowK** endereça diretamente:
+
+- **Transparência:** O usuário sabe o custo antes de iniciar, reduzindo a desconfiança.
+- **Eficiência:** Menos desperdício de energia renovável por sessão.
+- **Escalabilidade:** A arquitetura suporta múltiplos eletropostos em rede sem redesenho do sistema.
+- **Alinhamento Regulatório:** A tarifação por kWh com registro de sessão atende às diretrizes da ANEEL para exploração comercial de eletropostos (*Resolução Normativa nº 1.000/2021*).
