@@ -261,6 +261,7 @@ Base URL padrão: http://localhost:3000
   </tr>
 </table>
 
+
 ## Justificativa técnica das escolhas
 
 ### Node.js
@@ -312,6 +313,29 @@ Exemplo de cálculo da sessão (dados gerados pelo app):
 > **meta:** 8,5 kWh → ~43 s de simulação  
 > **preço:** R$ 2,19 / kWh (estação ChargeGrid)  
 > **custo:** 8,5 × 2,19 = R$ 18,62
+
+-----
+## 🚀 Diferenciais Inovadores
+
+O **FlowK** traz recursos inteligentes que elevam o patamar em relação aos eletropostos convencionais:
+
+ ### Algoritmo de Eficiência Energética
+> Redução dinâmica de potência após 80% de carga gerenciada via `charging-session.jsx`. Evita desperdício e simula o comportamento real de sistemas de recarga rápida.
+
+ ### Balanceamento Automático de Carga
+> Divisão inteligente e em tempo real da potência total entre os veículos conectados, garantindo eficiência máxima sem ultrapassar limites operacionais.
+
+ ### Estimativa Transparente de Custo e Tempo
+> Exibição clara de estimativas antes de iniciar a sessão, considerando metas de kWh, tipos de conectores e tarifas de horário de pico.
+
+ ### UX Mobile-First & Feedback Visual
+> Fluxo completo otimizado para menos de 60 segundos com estados bem definidos: **conectando** ➔ **conectado** ➔ **carregando** ➔ **finalizado**.
+
+ ### Carteira Integrada
+> Suporte completo a simulação de Pix, cartões de crédito/débito e gestão de saldo interno.
+
+ ### Arquitetura Pronta para o Futuro
+> Decoupling entre React Native (Expo) e Express 5 via API REST, permitindo integração direta ao ecossistema **GoodWe (SEMS+)** no futuro.
 
 -----
 ## Conexão com os conteúdos da disciplina
