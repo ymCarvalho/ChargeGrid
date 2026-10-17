@@ -315,7 +315,7 @@ Exemplo de cálculo da sessão (dados gerados pelo app):
 > **custo:** 8,5 × 2,19 = R$ 18,62
 
 -----
-## 🚀 Diferenciais Inovadores
+##  Diferenciais Inovadores
 
 O **FlowK** traz recursos inteligentes que elevam o patamar em relação aos eletropostos convencionais:
 
