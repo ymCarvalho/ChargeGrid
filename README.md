@@ -162,9 +162,7 @@ Aplicativo mobile com monitoramento em tempo real:
 * Splash e login: login com usuário mockado (usuario@chargegrid.com / 123456).
   
 * Home: saldo, atalhos rápidos e histórico de sessões de recarga.
-  
-* Mapa / busca de estações: lista de estações próximas com distância, potência e preço.
-  
+    
 * Seleção de carregador: escolha do conector (CCS2, Type 2), da velocidade de carga e da meta de energia; mostra
 estimativa de tempo e custo antes de iniciar.
 
