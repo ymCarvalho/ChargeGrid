@@ -103,7 +103,7 @@ Eletropostos comerciais operam hoje sem inteligência integrada:
 * Falta de visibilidade: usuário não sabe status, custo nem tempo restante
 ---
 
-## 2. Nossa solução -> Aplicar os 3 Pilares da GodWe
+## 2. Nossa solução -> Aplicar os 3 Pilares da GoodWe
 ----
 
 #### 01) Gerenciamento Inteligente de Demanda de Potência
