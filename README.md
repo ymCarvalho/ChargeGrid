@@ -173,10 +173,9 @@ estimativa de tempo e custo antes de iniciar.
 * Carteira: saldo, métodos de pagamento (Pix, cartão) e recarga de créditos por valores pré-definidos ou personalizados.
 --
 
-## Arquitetura  
+## Arquitetura  - 
 
 <img width="1312" height="1199" alt="Image" src="https://github.com/user-attachments/assets/fede1ee2-f828-41db-93d5-e03374b206fd" />
-
 
 ------
 ## API 
